@@ -29,11 +29,11 @@ console.log("openSignUp =", openSignUp);
             {/* Features section*/}
             <FeaturesSection features={features}/>
             {/* Pricing section*/}
-            <PricingSection  pricingPlans={pricingPlans}/>
+            <PricingSection  pricingPlans={pricingPlans} openSignUp={openSignUp}/>
             {/* Testimonials section
             <TestimonialSection /> */}
             {/* CTA section*/}
-            <CTASection />
+            <CTASection openSignUp={openSignUp} />
             {/* Footer section*/}
             <Footer />
             </div>

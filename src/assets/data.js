@@ -1,4 +1,4 @@
-import {CreditCard, FileText, LayoutDashboard, Receipt, Upload} from "lucide-react";
+import {FileText, LayoutDashboard, Upload} from "lucide-react";
 
 export const features = [
     {
@@ -20,67 +20,10 @@ export const features = [
         description: "Share files with anyone using secure links that you control."
     },
     {
-        iconName: "CreditCard",
-        iconColor: "text-orange-500",
-        title: "Flexible Credits",
-        description: "Pay only for what you use with our credit-based system."
-    },
-    {
         iconName: "FileText",
         iconColor: "text-red-500",
         title: "File Management",
         description: "Organize, preview, and manage your files from any device."
-    },
-    {
-        iconName: "Clock",
-        iconColor: "text-indigo-500",
-        title: "Transaction History",
-        description: "Keep track of all your credit purchases and usage."
-    }
-];
-
-export const pricingPlans = [
-    {
-        name: "Free",
-        price: "0",
-        description: "Perfect for getting started",
-        features: [
-            "5 file uploads",
-            "Basic file sharing",
-            "7-day file retention",
-            "Email support"
-        ],
-        cta: "Get Started",
-        highlighted: false
-    },
-    {
-        name: "Premium",
-        price: "50000",
-        description: "For individuals with larger needs",
-        features: [
-            "500 file uploads",
-            "Advanced file sharing",
-            "30-day file retention",
-            "Priority email support",
-            "File analytics"
-        ],
-        cta: "Go Premium",
-        highlighted: true
-    },
-    {
-        name: "Ultimate",
-        price: "250000",
-        description: "For teams and businesses",
-        features: [
-            "5000 file uploads",
-            "Team sharing capabilities",
-            "Unlimited file retention",
-            "24/7 priority support",
-            "Advanced analytics",
-            "API access"
-        ],
-        cta: "Go Ultimate",
-        highlighted: false
     }
 ];
 
@@ -110,7 +53,7 @@ export const testimonials = [
         rating: 4
     }
 ];
-//side menu bar options
+
 export const SIDE_MENU_DATA = [
     {
         id: "01",
@@ -129,17 +72,5 @@ export const SIDE_MENU_DATA = [
         label: "My Files",
         icon: FileText,
         path: "/my-files",
-    },
-    {
-        id: "04",
-        label: "Subscription",
-        icon: CreditCard,
-        path: "/subscriptions",
-    },
-    {
-        id: "05",
-        label: "Transactions",
-        icon: Receipt,
-        path: "/transactions",
     }
 ];

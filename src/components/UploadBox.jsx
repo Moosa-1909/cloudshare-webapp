@@ -41,13 +41,16 @@ const UploadBox = ({ files, onFileChange, onUpload, uploading, onRemoveFile }) =
                 <h2 className="text-lg font-medium">Upload Files</h2>
             </div>
 
+            {/* Drag and drop zone — onClick only on inner content, not the whole div */}
             <div
-                className="border-dashed border-2 border-gray-300 rounded-lg p-8 text-center bg-white cursor-pointer hover:border-blue-500 transition-colors"
+                className="border-dashed border-2 border-gray-300 rounded-lg p-8 text-center bg-white hover:border-blue-500 transition-colors"
                 onDragOver={handleDragOver}
                 onDrop={handleDrop}
-                onClick={handleBrowseClick}
             >
-                <div className="flex flex-col items-center justify-center">
+                <div
+                    className="flex flex-col items-center justify-center cursor-pointer"
+                    onClick={handleBrowseClick}
+                >
                     <div className="p-3 rounded-full bg-blue-50 mb-4">
                         <ArrowUpFromLine size={24} className="text-blue-600" />
                     </div>
@@ -97,7 +100,10 @@ const UploadBox = ({ files, onFileChange, onUpload, uploading, onRemoveFile }) =
             {files.length > 0 && (
                 <div className="mt-4">
                     <button
-                        onClick={onUpload}
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            onUpload();
+                        }}
                         disabled={uploading}
                         className="w-full py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 flex items-center justify-center gap-2 transition-colors"
                     >
